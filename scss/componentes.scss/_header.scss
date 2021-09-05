@@ -1,0 +1,77 @@
+.menu__container {
+  @include menu-container;
+
+  .menu__logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 30px;
+    letter-spacing: 2px;
+
+    h1 {
+      color: $primary-color;
+      background: linear-gradient(#3a7bd5, #3a6073);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 1.75em;
+
+      &:hover {
+        background: linear-gradient(#83a4d4 40%, #b6fbff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+
+  .menu__items {
+    padding: 7px 13px;
+    font-size: 1em;
+    text-decoration: none;
+    color: $primary-text-color;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $shadow-color;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      transition: all 0.1s ease;
+
+      &:active {
+        border-bottom: 3px solid $primary-color-dark;
+        color: $primary-color-dark;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+
+  .menu__bar {
+    display: none;
+    margin-right: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    color: $primary-color;
+  }
+
+  .menu__items .show {
+    top: 65px;
+  }
+
+  .menu__btn--login {
+    @include default-btn($secondary-color);
+
+    &:hover {
+      transition: 0.3s ease;
+      background: $dark-blue-gray;
+      color: $primary-text-color;
+
+      &:active {
+        transition: 0.3s ease;
+        background: $secondary-color;
+        color: $primary-text-color;
+      }
+    }
+  }
+}
